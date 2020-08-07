@@ -17,6 +17,7 @@
             <div class="search">
                 search: <input type="text" class="text" value="" id="searchInput" onchange="search();">
             </div>
+            <br/>
             <ul id="library">
                 {% for song in library %}
                 <li id="{{ song.id }}" class="song" onclick="add(this.dataset.songindex)" data-songindex="{{ song.index }}">
