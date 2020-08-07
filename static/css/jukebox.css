@@ -1,13 +1,27 @@
+body, html {
+    background: #eee;
+    color: #333;
+}
+
+input {
+    background: #eee;
+    color: #333;
+    border: 2px solid #666 !important;
+    border-radius: 3px;
+    padding: 2px;
+}
+
 .name {
     font-size: 14px;
 }
 
 .path {
     font-size: 10px;
+    color: #777;
 }
 
 li {
-    border-bottom: solid 1px #aaa;
+    border-bottom: solid 2px #aaa;
 }
 
 #main-wrap {
@@ -23,4 +37,22 @@ ul {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
+}
+
+@media (prefers-color-scheme: dark) {
+    li {
+        border-bottom: solid 2px #444;
+    }
+    input {
+        background: #222;
+        color: #ddd;
+        border: 2px solid #444 !important;
+    }
+    body, html {
+        background: #222;
+        color: #eee;
+    }
+    .path {
+        color: #aaa;
+    }
 }
