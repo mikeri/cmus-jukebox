@@ -1,0 +1,26 @@
+.name {
+    font-size: 14px;
+}
+
+.path {
+    font-size: 10px;
+}
+
+li {
+    border-bottom: solid 1px #aaa;
+}
+
+#main-wrap {
+    padding: 15px;
+}
+
+.search {
+    width: 100%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}

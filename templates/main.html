@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+        <meta charset="UTF-8">
+        <link media="all" href="static/css/jukebox.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script type="text/javascript">
+            library = {{ library_json|safe }};
+        </script>
+        <script src="static/js/jukebox.js"></script>
+        <div id="main-wrap">
+            <div class="search">
+                search: <input type="text" class="text" value="" id="searchInput" onchange="search();">
+            </div>
+            <ul id="library">
+                {% for song in library %}
+                <li id="{{ song.id }}" class="song" onclick="add(this.dataset.songindex)" data-songindex="{{ song.index }}">
+                    <span class="name">{{ song.name }}</span><br/>
+                    <span class="path">{{ song.path }}</span>
+                </li>
+                {% endfor%}
+            </ul>
+            <ul id="results">
+            </ul>
+        </div>
+    </body>
+</html>
